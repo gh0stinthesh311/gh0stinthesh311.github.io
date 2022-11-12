@@ -2,94 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://soydivision.github.io/docs/main-section/</loc>
+    <loc>http://example.org/docs/example/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/</loc>
+    <loc>http://example.org/docs/example/table-of-contents/with-toc/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/</loc>
+    <loc>http://example.org/docs/example/table-of-contents/without-toc/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/</loc>
+    <loc>http://example.org/posts/creating-a-new-theme/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/travel/</loc>
+    <loc>http://example.org/posts/migrate-from-jekyll/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/about/</loc>
+    <loc>http://example.org/docs/example/table-of-contents/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/cv/</loc>
+    <loc>http://example.org/docs/example/collapsed/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/disclaimer/</loc>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/travel/east-kazakhstan-2022-autumn/</loc>
+    <loc>http://example.org/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/travel/north-kazakhstan-2022-summer/</loc>
+    <loc>http://example.org/posts/goisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/about-me/</loc>
+    <loc>http://example.org/categories/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/gallery/</loc>
+    <loc>http://example.org/tags/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/contemplations/</loc>
+    <loc>http://example.org/categories/development/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/self-improvement/</loc>
+    <loc>http://example.org/posts/hugoisforlovers/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/anime/</loc>
+    <loc>http://example.org/tags/go/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/</loc>
+    <loc>http://example.org/tags/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/cooking/</loc>
+    <loc>http://example.org/categories/golang/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/fixit/</loc>
+    <loc>http://example.org/tags/hugo/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/misc/</loc>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/articles/philosophy/</loc>
+    <loc>http://example.org/tags/templates/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/biographies/</loc>
+    <loc>http://example.org/tags/themes/</loc>
+    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/computer-science/</loc>
+    <loc>http://example.org/docs/example/collapsed/3rd-level/4th-level/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/culture/</loc>
+    <loc>http://example.org/docs/example/collapsed/3rd-level/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/math/</loc>
+    <loc>http://example.org/docs/example/hidden/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/philosophy/</loc>
+    <loc>http://example.org/docs/shortcodes/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/politics/</loc>
+    <loc>http://example.org/docs/shortcodes/buttons/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/software-development/</loc>
+    <loc>http://example.org/docs/shortcodes/columns/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/</loc>
+    <loc>http://example.org/docs/shortcodes/details/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/teach-yourself-computer-science-course/</loc>
+    <loc>http://example.org/docs/shortcodes/expand/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/anime/3rd-level/4th-level/</loc>
+    <loc>http://example.org/docs/shortcodes/hints/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/anime/3rd-level/</loc>
+    <loc>http://example.org/docs/shortcodes/katex/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/asia/</loc>
+    <loc>http://example.org/docs/shortcodes/mermaid/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/europe-west/</loc>
+    <loc>http://example.org/docs/shortcodes/section/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/must-watch/</loc>
+    <loc>http://example.org/docs/shortcodes/section/first-page/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/biographies/cant_hurt_me_master_your_mind_and_defy_the_odds_david_goggins/</loc>
+    <loc>http://example.org/docs/shortcodes/section/second-page/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/math/architecture_of_mathematics_by_simon_serovajsky/</loc>
+    <loc>http://example.org/docs/shortcodes/tabs/</loc>
   </url><url>
-    <loc>https://soydivision.github.io/categories/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/asia/okuribito/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/tags/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/biographies/the_autobiography_of_gucci_mane_radric_delantic_davis/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/books/culture/the_hot_house_life_inside_leavenworth_prison/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/asia/tremble_all_you_want/</loc>
-  </url><url>
-    <loc>https://soydivision.github.io/docs/main-section/motion-pictures/movies/europe-west/pleasantville/</loc>
+    <loc>http://example.org/docs/</loc>
   </url>
 </urlset>
