@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bagzhan Sadvakassov Website</title>
+    <title>Bagzhan Sadvakassov blog</title>
     <link>https://soydivision.github.io/docs/main-section/articles/fixit/</link>
-    <description>Recent content on Bagzhan Sadvakassov Website</description>
+    <description>Recent content on Bagzhan Sadvakassov blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://soydivision.github.io/docs/main-section/articles/fixit/index.xml" rel="self" type="application/rss+xml" />
   </channel>
