@@ -5,19 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Chapter one. Springing into action. This chapter covers. •  Spring’s bean container •  Exploring Spring’s core modules •  The greater Spring ecosystem •  What’s new in Spring
 1.1 Simplifying Java development Spring simplifies Java development:
-•  Lightweight and minimally invasive development with POJOs•  Loose coupling through DI and interface orientation•  Declarative programming through aspects and common conventions•  Eliminating boilerplate code with aspects and templates 1.">
+•  Lightweight and minimally invasive development with POJOs•  Loose coupling through DI and interface orientation•  Declarative programming through aspects and common conventions•  Eliminating boilerplate code with aspects and templates1.">
 <meta name="theme-color" content="#FFFFFF">
 <meta name="color-scheme" content="light dark"><meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://soydivision.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/" />
-
 <title>Spring in Action Fourth Edition Covers Spring 4 | Bagzhan Sadvakassov blog</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
   <script defer src="/flexsearch.min.js"></script>
-  <script defer src="/en.search.min.e7c5fcf84f8ae7a581a32c6f66970567646566dbfb5bf72a34e7fda18f84b6bb.js" integrity="sha256-58X8&#43;E&#43;K56WBoyxvZpcFZ2RlZtv7W/cqNOf9oY&#43;Etrs=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.78166b9d46e23e0ea915cb6887a30b633e7bc4fad10c8b6b9f6fa532271c19ba.js" integrity="sha256-eBZrnUbiPg6pFctoh6MLYz57xPrRDItrn2&#43;lMiccGbo=" crossorigin="anonymous"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLTLJTJYHY"></script>
 <script>
@@ -697,7 +696,7 @@ Application context loads bean definitions and wires them together.</p>
 <p>package com.springinaction.knights;
 import org.springframework.context.support.ClassPathXmlApplicationContext;</p>
 <p>public class KnightMain {
-public static void main(String[] args) throws Exception 
+public static void main(String[] args) throws Exception
 {
 ClassPathXmlApplicationContext context =
 new ClassPathXmlApplicationContext(&ldquo;META-INF/spring/knight.xml&rdquo;); // Loading context</p>
@@ -706,7 +705,7 @@ knight.embarkOnQuest(); // Use it
 context.close();}}</p>
 <p>Note: knights.xml file knows what the implementations are (BraveKnight and SlayDragonQuest as shown in 1.6).</p>
 <p>1.1.3 Applying aspects.</p>
-<p>Aspect-oriented programming (AOP) enables you to capture functionality that’s used throughout your application in reusable components. 
+<p>Aspect-oriented programming (AOP) enables you to capture functionality that’s used throughout your application in reusable components.
 In more detail:
 Components in system tend to carry responsibilities beyond their core functionality. Logging is prime example.
 By spreading these concerns across multiple components:
@@ -776,7 +775,7 @@ By now author has shown:</p>
 Ahead Spring container – where you app beans reside.</li>
 </ol>
 <p>1.2 Containing your beans
-In spring app objects live in container (~ c.). 
+In spring app objects live in container (~ c.).
 Container:</p>
 <ol>
 <li>Creates objects (~ o.)</li>
@@ -792,10 +791,10 @@ Spring’s container uses DI to manage the components that make up an applicatio
 </ol>
 <p>1.2.1 Working with an application context (~ctxt.)
 Application context flavors:
-• AnnotationConfigApplicationContext 
+• AnnotationConfigApplicationContext
 • AnnotationConfigWebApplicationContext
-• ClassPathXmlApplicationContext 
-• FileSystemXmlApplicationContext 
+• ClassPathXmlApplicationContext
+• FileSystemXmlApplicationContext
 • XmlWebApplicationContext</p>
 <p>A) Loading ctxt. using FileSystemXmlApplicationContext:</p>
 <p>ApplicationContext context = new
@@ -831,7 +830,7 @@ com.springinaction.knights.config.KnightConfig.class);</p>
 
 
 
-  <script>(function(){function e(n){const e=window.getSelection(),t=document.createRange();t.selectNodeContents(n),e.removeAllRanges(),e.addRange(t)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
 
 
  
