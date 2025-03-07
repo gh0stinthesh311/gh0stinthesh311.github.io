@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cypress limitations 2023. Cypress is not a general purpose automation tool. Cypress is not a general purpose automation tool. According to official cypress docs [2]. Cypress has experimental support for Safari. No multiple tabs or browsers. Cypress doesn&rsquo;t support testing scenarios involving multiple tabs or windows. This is deliberate choice by creators, some limitations “prevent you from writing bad, slow, or flaky tests ” [2]. Restricted Cross-Domain Testing. Cypress forces you to contain your tests in one app and one web page.">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://soydivision.github.io/docs/main-section/books/software-development/json_ignore_or_not_ignore/">
+  <meta property="og:site_name" content="Bagzhan Sadvakassov blog">
+  <meta property="og:title" content="Bagzhan Sadvakassov blog">
+  <meta property="og:description" content="Cypress limitations 2023. Cypress is not a general purpose automation tool. Cypress is not a general purpose automation tool. According to official cypress docs [2]. Cypress has experimental support for Safari. No multiple tabs or browsers. Cypress doesn’t support testing scenarios involving multiple tabs or windows. This is deliberate choice by creators, some limitations “prevent you from writing bad, slow, or flaky tests ” [2]. Restricted Cross-Domain Testing. Cypress forces you to contain your tests in one app and one web page.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>JSON Ignore or Not Ignore | Bagzhan Sadvakassov blog</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.82c5dbd23447cee0b4c2aa3ed08ce0961faa40e1fa370eee4f8c9f02e0d46b5f.css" integrity="sha256-gsXb0jRHzuC0wqo&#43;0Izglh&#43;qQOH6Nw7uT4yfAuDUa18=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/en.search.min.ad6ced9cc42115732604bd23c6d655f2354d367a4314db70dd5e385a20194103.js" integrity="sha256-rWztnMQhFXMmBL0jxtZV8jVNNnpDFNtw3V44WiAZQQM=" crossorigin="anonymous"></script>
+
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLTLJTJYHY"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BLTLJTJYHY');
+        }
+      </script>
+    
+  
+
+<link rel="alternate" type="application/rss+xml" href="https://soydivision.github.io/docs/main-section/books/software-development/json_ignore_or_not_ignore/index.xml" title="Bagzhan Sadvakassov blog" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Bagzhan Sadvakassov blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/" class="">Section Introduction</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-25b44a851b60179e21a13aab69f4830d" class="toggle"  />
+    <label for="section-25b44a851b60179e21a13aab69f4830d" class="flex justify-between">
+      <a role="button" class="">Articles</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/contemplations/" class="">Contemplations</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/health-and-self-impovement/" class="">Health and Self Impovement</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/misc/" class="">Misc</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-4fdc3fb3d2c9941988adefdbf693a6c2" class="toggle" checked />
+    <label for="section-4fdc3fb3d2c9941988adefdbf693a6c2" class="flex justify-between">
+      <a role="button" class="">Books</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/biographies/" class="">Biographies</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/computer-science/" class="">Computer Science</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/culture/" class="">Culture</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/math/" class="">Math</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/philosophy/" class="">Philosophy</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/politics/" class="">Politics</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/software-development/" class="">Software Development</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9584e3df30c0cb9e1875cbece5a8186d" class="toggle"  />
+    <label for="section-9584e3df30c0cb9e1875cbece5a8186d" class="flex justify-between">
+      <a role="button" class="">Motion Pictures</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-aaceb5858082d8aafa11dac58d4d82d0" class="toggle"  />
+    <label for="section-aaceb5858082d8aafa11dac58d4d82d0" class="flex justify-between">
+      <a href="/docs/main-section/motion-pictures/movies/" class="">Movies</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/movies/east/" class="">East</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/movies/west/" class="">West</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/anime/" class="">Anime</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/must-watch/" class="">Must Watch</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-d298b4f15dc3d67a5a650157327c18a2" class="toggle"  />
+    <label for="section-d298b4f15dc3d67a5a650157327c18a2" class="flex justify-between">
+      <a href="/docs/main-section/photography/" class="">Photography</a>
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9ceb64c23bf7cebdb0aee22143f83918" class="toggle"  />
+    <label for="section-9ceb64c23bf7cebdb0aee22143f83918" class="flex justify-between">
+      <a role="button" class="">Travel</a>
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/travel/east-kazakhstan-2022-autumn/" class="">East Kazakhstan (2022, Autumn)</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/travel/north-kazakhstan-2022-summer/" class="">North Kazakhstan (2022, Summer)</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about/" class="">About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/disclaimer/" class="">Disclaimer</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about-me/" class="">About Me</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>JSON Ignore or Not Ignore</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><p>Cypress limitations 2023.
+Cypress is not a general purpose automation tool.
+Cypress is not a general purpose automation tool.
+According to official cypress docs [2].
+Cypress has experimental support for Safari.
+No multiple tabs or browsers.
+Cypress doesn&rsquo;t support testing scenarios involving multiple tabs or windows. This is deliberate choice by creators, some limitations “prevent you from writing bad, slow, or flaky tests ” [2].
+Restricted Cross-Domain Testing.
+Cypress forces you to contain your tests in one app and one web page. Again, this is deliberate choice.
+No Tab button.
+Well, no TAB button.
+Iframe.
+Cypress has (or rather had) a difficulty working with iframes. Latest versions seem to have implemented a support to an extent.
+JS only. In browser.
+Cypress is executed inside browser which has some advantages and disadvantages.
+Cypress runs in the context of the browser. [5]
+You have real, native access to everything in your application under test. It is impossible for Cypress to &lsquo;miss&rsquo; elements and it always knows the moment your application fires any kind of event. [4]
+But what this also means is that your test code is being evaluated inside the browser. Test code is not evaluated in Node, or any other server side language. The only language we will ever support is the language of the web: JavaScript. [4]
+Essentially:
+With Cypress it&rsquo;s easier to inspect what is running in the browser, but harder to talk to the outside world. [5]
+Page object pattern is discouraged.
+Seems like this is mainly because of how chaining commands work in Cypress. Not that PO cannot be implemented in Cypress. As project progresses PO essentially stands for reusable code. So decision of using this pattern is up to tests maintainers aka you. Refer [3].
+Conclusion.
+Seems like Cypress is mainly for QA&rsquo;s who want to automate simple regression tests for modern asynchronous Single Page Applications, involving front end only and having no time to deal with common complexities that arise in the process of test automation (AJAX, web drivers, element waits to name the few). Note: Some issues remain open from 2016:</p>
+<p>Key takeaway:
+Choice of test automation tool is highly dependent on the context. That is - you have to sit down and think what do you need to test and then find a best solution. Cypress is just a tool after all.</p>
+</article>
+ 
+      <h2> <a href="https://soydivision.github.io/docs/disclaimer/">Disclaimer</a></h2>
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "soydivision-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  
+<nav id="TableOfContents"></nav>
+
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
