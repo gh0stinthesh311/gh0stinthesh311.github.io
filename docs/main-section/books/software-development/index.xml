@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bagzhan Sadvakassov blog</title>
-    <link>https://soydivision.github.io/docs/main-section/books/software-development/</link>
+    <link>https://gh0stinthesh311.github.io/docs/main-section/books/software-development/</link>
     <description>Recent content on Bagzhan Sadvakassov blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://soydivision.github.io/docs/main-section/books/software-development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://gh0stinthesh311.github.io/docs/main-section/books/software-development/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
