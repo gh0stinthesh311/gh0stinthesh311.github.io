@@ -1,4 +1,14 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Chapter one.
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Chapter one.
 Springing into action.
 This chapter covers.
 •  Spring’s bean container
@@ -16,106 +26,833 @@ Spring simplifies Java development:
 1.1.2 Injecting dependencies
 HOW DI WORKS.
 Listing 1.2
-Consider Knight class:"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/"><meta property="og:site_name" content="Bagzhan Sadvakassov blog"><meta property="og:title" content="Bagzhan Sadvakassov blog"><meta property="og:description" content="Chapter one. Springing into action. This chapter covers. •  Spring’s bean container •  Exploring Spring’s core modules •  The greater Spring ecosystem •  What’s new in Spring
+Consider Knight class:">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/">
+  <meta property="og:site_name" content="Bagzhan Sadvakassov blog">
+  <meta property="og:title" content="Bagzhan Sadvakassov blog">
+  <meta property="og:description" content="Chapter one. Springing into action. This chapter covers. •  Spring’s bean container •  Exploring Spring’s core modules •  The greater Spring ecosystem •  What’s new in Spring
 1.1 Simplifying Java development Spring simplifies Java development:
-•  Lightweight and minimally invasive development with POJOs•  Loose coupling through DI and interface orientation•  Declarative programming through aspects and common conventions•  Eliminating boilerplate code with aspects and templates1.1.2 Injecting dependencies HOW DI WORKS. Listing 1.2 Consider Knight class:"><meta property="og:locale" content="en_us"><meta property="og:type" content="website"><title>Spring in Action Fourth Edition Covers Spring 4 | Bagzhan Sadvakassov blog</title><link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/><link rel=stylesheet href=/book.min.d124d6c76b11546b04023ef152f0ca77dd5bfd00e1638c75250d60e274cdc189.css integrity="sha256-0STWx2sRVGsEAj7xUvDKd91b/QDhY4x1JQ1g4nTNwYk=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.fed2bf65e69ba28b90850a07b8ac06a8b039ce9cea7496fce4c0e74cd0cdda00.js integrity="sha256-/tK/ZeaboouQhQoHuKwGqLA5zpzqdJb85MDnTNDN2gA=" crossorigin=anonymous></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-BLTLJTJYHY"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-BLTLJTJYHY")}</script><link rel=alternate type=application/rss+xml href=https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/index.xml title="Bagzhan Sadvakassov blog"></head><body dir=ltr class="book-kind-section book-type-docs"><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>Bagzhan Sadvakassov blog</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/docs/main-section/>Section Introduction</a><ul><li><input type=checkbox id=section-ade8d5841b3ba4e865718ff0a0376b7d class=toggle>
-<label for=section-ade8d5841b3ba4e865718ff0a0376b7d class=flex><a role=button>Articles</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul><li><a href=/docs/main-section/articles/contemplations/>Contemplations</a><ul></ul></li><li><a href=/docs/main-section/articles/health-and-self-impovement/>Health and Self Impovement</a><ul></ul></li><li><a href=/docs/main-section/articles/misc/>Misc</a><ul></ul></li></ul></li><li><input type=checkbox id=section-a62e8afd8bf94d1830a90600f35ea04b class=toggle checked>
-<label for=section-a62e8afd8bf94d1830a90600f35ea04b class=flex><a role=button>Books</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul><li><a href=/docs/main-section/books/biographies/>Biographies</a><ul></ul></li><li><a href=/docs/main-section/books/computer-science/>Computer Science</a><ul></ul></li><li><a href=/docs/main-section/books/culture/>Culture</a><ul></ul></li><li><a href=/docs/main-section/books/math/>Math</a><ul></ul></li><li><a href=/docs/main-section/books/philosophy/>Philosophy</a><ul></ul></li><li><a href=/docs/main-section/books/politics/>Politics</a><ul></ul></li><li><a href=/docs/main-section/books/software-development/>Software Development</a><ul></ul></li></ul></li><li><input type=checkbox id=section-e6878dd2f9386bbeea1cc1932211e87d class=toggle>
-<label for=section-e6878dd2f9386bbeea1cc1932211e87d class=flex><a href=/docs/main-section/islamic-tips/>Islamic Tips</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul></ul></li><li><input type=checkbox id=section-9e60bfe77070674e1558c4c196c982d9 class=toggle>
-<label for=section-9e60bfe77070674e1558c4c196c982d9 class=flex><a role=button>Motion Pictures</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul><li><input type=checkbox id=section-04d2709fe11c0d45c537db0d18a1c69c class=toggle>
-<label for=section-04d2709fe11c0d45c537db0d18a1c69c class=flex><a href=/docs/main-section/motion-pictures/movies/>Movies</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul><li><a href=/docs/main-section/motion-pictures/movies/east/>East</a><ul></ul></li><li><a href=/docs/main-section/motion-pictures/movies/west/>West</a><ul></ul></li></ul></li><li><a href=/docs/main-section/motion-pictures/anime/>Anime</a><ul></ul></li><li><a href=/docs/main-section/motion-pictures/must-watch/>Must Watch</a><ul></ul></li></ul></li><li><input type=checkbox id=section-5533717a4cb85b535af3329ee3e3a0c7 class=toggle>
-<label for=section-5533717a4cb85b535af3329ee3e3a0c7 class=flex><a href=/docs/main-section/photography/>Photography</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul></ul></li><li><input type=checkbox id=section-f067fe2f62b06d4a5b0bb62878e2d875 class=toggle>
-<label for=section-f067fe2f62b06d4a5b0bb62878e2d875 class=flex><a role=button>Travel</a>
-<img src=/icons/chevron-right.svg class=book-icon></label><ul><li><a href=/docs/main-section/travel/east-kazakhstan-2022-autumn/>East Kazakhstan (2022, Autumn)</a><ul></ul></li><li><a href=/docs/main-section/travel/north-kazakhstan-2022-summer/>North Kazakhstan (2022, Summer)</a><ul></ul></li></ul></li></ul></li><li><a href=/docs/about/>About</a><ul></ul></li><li><a href=/docs/disclaimer/>Disclaimer</a><ul></ul></li><li><a href=/docs/about-me/>About Me</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class="book-header hidden"><div class="flex align-center justify-between"><label for=menu-control><img src=/icons/menu.svg class=book-icon alt=Menu></label><h3>Spring in Action Fourth Edition Covers Spring 4</h3><label for=toc-control><img src=/icons/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><p>Chapter one.
+•  Lightweight and minimally invasive development with POJOs•  Loose coupling through DI and interface orientation•  Declarative programming through aspects and common conventions•  Eliminating boilerplate code with aspects and templates1.1.2 Injecting dependencies HOW DI WORKS. Listing 1.2 Consider Knight class:">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+<title>Spring in Action Fourth Edition Covers Spring 4 | Bagzhan Sadvakassov blog</title>
+<link rel="icon" href="/favicon.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/">
+<link rel="stylesheet" href="/book.min.d124d6c76b11546b04023ef152f0ca77dd5bfd00e1638c75250d60e274cdc189.css" integrity="sha256-0STWx2sRVGsEAj7xUvDKd91b/QDhY4x1JQ1g4nTNwYk=" crossorigin="anonymous">
+
+
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/en.search.min.6c6748e1882d212d615f07869da3c2f9bc9f1afb9b98393f897aa687483a676c.js" integrity="sha256-bGdI4YgtIS1hXweGnaPC&#43;byfGvubmDk/iXqmh0g6Z2w=" crossorigin="anonymous"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLTLJTJYHY"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BLTLJTJYHY');
+        }
+      </script><link rel="alternate" type="application/rss+xml" href="https://gh0stinthesh311.github.io/docs/main-section/books/software-development/spring_in_action_fourth_edition_covers_spring_4/index.xml" title="Bagzhan Sadvakassov blog" />
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-docs">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><span>Bagzhan Sadvakassov blog</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/" class="">
+      Section Introduction</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-ade8d5841b3ba4e865718ff0a0376b7d" class="toggle"  />
+    <label for="section-ade8d5841b3ba4e865718ff0a0376b7d" class="flex">
+      <a role="button" class="">
+        Articles</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/contemplations/" class="">
+      Contemplations</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/health-and-self-impovement/" class="">
+      Health and Self Impovement</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/articles/misc/" class="">
+      Misc</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-a62e8afd8bf94d1830a90600f35ea04b" class="toggle" checked />
+    <label for="section-a62e8afd8bf94d1830a90600f35ea04b" class="flex">
+      <a role="button" class="">
+        Books</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/biographies/" class="">
+      Biographies</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/culture/" class="">
+      Culture</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/math/" class="">
+      Math</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/philosophy/" class="">
+      Philosophy</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/politics/" class="">
+      Politics</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/science/" class="">
+      Science</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/books/software-development/" class="">
+      Software Development</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-e6878dd2f9386bbeea1cc1932211e87d" class="toggle"  />
+    <label for="section-e6878dd2f9386bbeea1cc1932211e87d" class="flex">
+      <a href="/docs/main-section/islamic-tips/" class="">
+        Islamic Tips</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-9e60bfe77070674e1558c4c196c982d9" class="toggle"  />
+    <label for="section-9e60bfe77070674e1558c4c196c982d9" class="flex">
+      <a role="button" class="">
+        Motion Pictures</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-04d2709fe11c0d45c537db0d18a1c69c" class="toggle"  />
+    <label for="section-04d2709fe11c0d45c537db0d18a1c69c" class="flex">
+      <a href="/docs/main-section/motion-pictures/movies/" class="">
+        Movies</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/movies/east/" class="">
+      East</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/movies/west/" class="">
+      West</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/anime/" class="">
+      Anime</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/motion-pictures/must-watch/" class="">
+      Must Watch</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-5533717a4cb85b535af3329ee3e3a0c7" class="toggle"  />
+    <label for="section-5533717a4cb85b535af3329ee3e3a0c7" class="flex">
+      <a href="/docs/main-section/photography/" class="">
+        Photography</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <input type="checkbox" id="section-f067fe2f62b06d4a5b0bb62878e2d875" class="toggle"  />
+    <label for="section-f067fe2f62b06d4a5b0bb62878e2d875" class="flex">
+      <a role="button" class="">
+        Travel</a>
+      <img src="/icons/chevron-right.svg" class="book-icon" />
+    </label>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/travel/east-kazakhstan-2022-autumn/" class="">
+      East Kazakhstan (2022, Autumn)</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/main-section/travel/north-kazakhstan-2022-summer/" class="">
+      North Kazakhstan (2022, Summer)</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about/" class="">
+      About</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/disclaimer/" class="">
+      Disclaimer</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/docs/about-me/" class="">
+      About Me</a>
+  
+
+          
+  <ul>
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Spring in Action Fourth Edition Covers Spring 4</h3>
+
+  <label for="toc-control">
+    
+    <img src="/icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><p>Chapter one.
 Springing into action.
 This chapter covers.
 •  Spring’s bean container
 •  Exploring Spring’s core modules
 •  The greater Spring ecosystem
-•  What’s new in Spring</p><p>1.1
+•  What’s new in Spring</p>
+<p>1.1
 Simplifying Java development
-Spring simplifies Java development:</p><pre><code>•  Lightweight and minimally invasive development with POJOs
+Spring simplifies Java development:</p>
+<pre><code>•  Lightweight and minimally invasive development with POJOs
 •  Loose coupling through DI and interface orientation
 •  Declarative programming through aspects and common conventions
 •  Eliminating boilerplate code with aspects and templates
-</code></pre><p>1.1.2 Injecting dependencies
+</code></pre>
+<p>1.1.2 Injecting dependencies
 HOW DI WORKS.
 Listing 1.2
-Consider Knight class:</p><p>A DamselRescuingKnight can only embark on RescueDamselQuests.</p><p>package com.springinaction.knights;</p><p>public class DamselRescuingKnight implements Knight {
-private RescueDamselQuest quest;</p><p>public DamselRescuingKnight() {
+Consider Knight class:</p>
+<p>A DamselRescuingKnight can only embark on RescueDamselQuests.</p>
+<p>package com.springinaction.knights;</p>
+<p>public class DamselRescuingKnight implements Knight {
+private RescueDamselQuest quest;</p>
+<p>public DamselRescuingKnight() {
 this.quest = new RescueDamselQuest();
-}</p><p>public void embarkOnQuest() {
-quest.embark();}}</p><ul><li>This makes a DamselRescuingKnight tightly coupled to a Rescue – DamselQuest.
+}</p>
+<p>public void embarkOnQuest() {
+quest.embark();}}</p>
+<ul>
+<li>This makes a DamselRescuingKnight tightly coupled to a Rescue – DamselQuest.
 No unit testing can be accomplished: can’t assert that the quest’s embark() method is called when the knight’s embarkOnQuest() method is called.
-Tightly coupled code exhibits “whack-a-mole” bug behavior (fixing one bug results new bugs). On the other hand, …, classes need to know about each other somehow.<br>Coupling is necessary but should be carefully managed.
+Tightly coupled code exhibits “whack-a-mole” bug behavior (fixing one bug results new bugs). On the other hand, …,  classes need to know about each other somehow.<br>
+Coupling is necessary but should be carefully managed.
 With DI, objects are given their dependencies at creation time by some third party that coordinates
-each object in the system.</li></ul><p>Listing 1.3 A BraveKnight is flexible enough to take on any Quest he’s given.
-(Note: BraveKnight, unlike DamselRescuingKnight, doesn’t create his own quest. Instead, he’s given a quest at construction time as a constructor argument).</p><p>package com.springinaction.knights;</p><p>public class BraveKnight implements Knight {
-private Quest quest;</p><p>public BraveKnight(Quest quest) {
+each object in the system.</li>
+</ul>
+<p>Listing 1.3 A BraveKnight is flexible enough to take on any Quest he’s given.
+(Note: BraveKnight, unlike DamselRescuingKnight, doesn’t create his own quest. Instead, he’s given a quest at construction time as a constructor argument).</p>
+<p>package com.springinaction.knights;</p>
+<p>public class BraveKnight implements Knight {
+private Quest quest;</p>
+<p>public BraveKnight(Quest quest) {
 this.quest = quest;
 }
 public void embarkOnQuest() {
-quest.embark();}}</p><pre><code> Quest is injected (~ construction injection). Quest in a an interface, so BK can embark on any other Quest implementation he’s given. Also to test BraveKnight you can inject it with a mock Quest.
-</code></pre><p>INJECTING A QUEST INTO A KNIGHT
-Listing 1.5 SlayDragonQuest is a Quest to be injected into BraveKnight.</p><p>package com.springinaction.knights;
+quest.embark();}}</p>
+<pre><code> Quest is injected (~ construction injection). Quest in a an interface, so BK can embark on any other Quest implementation he’s given. Also to test BraveKnight you can inject it with a mock Quest.
+</code></pre>
+<p>INJECTING A QUEST INTO A KNIGHT
+Listing 1.5 SlayDragonQuest is a Quest to be injected into BraveKnight.</p>
+<p>package com.springinaction.knights;
 import java.io.PrintStream;
 public class SlayDragonQuest implements Quest {
-private PrintStream stream;</p><p>public SlayDragonQuest(PrintStream stream) {
+private PrintStream stream;</p>
+<p>public SlayDragonQuest(PrintStream stream) {
 this.stream = stream;
 }
 // notice that rather than lean on System.out
 .println() like many small getting-started Java samples, SlayDragonQuest more
-generically asks for a PrintStream through its constructor.// end of comment.</p><p>public void embark() {
-stream.println(&ldquo;Embarking on quest to slay the dragon!&rdquo;);}}</p><p>How can we give SlayDragonQuest to BraveKnight? And PrintStream to SlayDragonQuest? The act of creating associations between application components is commonly referred to as wiring.</p><p>Listing 1.6 XML based configuration (wiring). Injecting a SlayDragonQuest into a BraveKnight:</p><p>Note: SlayDragonQuest bean declaration uses the Spring Expression Language to pass System.out.</p><p>Listing 1.7 Java-based configuration (alternative to XML shown in listing 1.6).</p><p>package com.springinaction.knights.config;
+generically asks for a PrintStream through its constructor.// end of comment.</p>
+<p>public void embark() {
+stream.println(&ldquo;Embarking on quest to slay the dragon!&rdquo;);}}</p>
+<p>How can we give SlayDragonQuest to BraveKnight? And PrintStream to SlayDragonQuest? The act of creating associations between application components is commonly referred to as wiring.</p>
+<p>Listing 1.6 XML based configuration (wiring).  Injecting a SlayDragonQuest into a BraveKnight:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Note: SlayDragonQuest bean declaration uses the Spring Expression Language to pass System.out.</p>
+<p>Listing 1.7 Java-based configuration (alternative to XML shown in listing 1.6).</p>
+<p>package com.springinaction.knights.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import com.springinaction.knights.BraveKnight;
 import com.springinaction.knights.Knight;
 import com.springinaction.knights.Quest;
-import com.springinaction.knights.SlayDragonQuest;</p><p>@Configuration
-public class KnightConfig {</p><p>@Bean
+import com.springinaction.knights.SlayDragonQuest;</p>
+<p>@Configuration
+public class KnightConfig {</p>
+<p>@Bean
 public Knight knight() {
 return new BraveKnight(quest());
-}</p><p>@Bean
+}</p>
+<p>@Bean
 public Quest quest() {
-return new SlayDragonQuest(System.out);}}</p><p>Benefits of DI : Dependent classes (BK and SDQ) do not know how their dependencies come to be. Spring manages them through configuration. This makes possible to change those dependencies.</p><p>SEEING IT WORK
-Application context loads bean definitions and wires them together.</p><p>Listing 1.8 main() creates the Spring application context based on the knights.xml file:</p><p>package com.springinaction.knights;
-import org.springframework.context.support.ClassPathXmlApplicationContext;</p><p>public class KnightMain {
+return new SlayDragonQuest(System.out);}}</p>
+<p>Benefits of DI : Dependent classes (BK and SDQ) do not know how their dependencies come to be. Spring manages them through configuration. This makes possible to change those dependencies.</p>
+<p>SEEING IT WORK
+Application context loads bean definitions and wires them together.</p>
+<p>Listing 1.8 main() creates the Spring application context based on the knights.xml file:</p>
+<p>package com.springinaction.knights;
+import org.springframework.context.support.ClassPathXmlApplicationContext;</p>
+<p>public class KnightMain {
 public static void main(String[] args) throws Exception
 {
 ClassPathXmlApplicationContext context =
-new ClassPathXmlApplicationContext(&ldquo;META-INF/spring/knight.xml&rdquo;); // Loading context</p><p>Knight knight = context.getBean(Knight.class); // Get the knight bean
+new ClassPathXmlApplicationContext(&ldquo;META-INF/spring/knight.xml&rdquo;); // Loading context</p>
+<p>Knight knight = context.getBean(Knight.class); // Get the knight bean
 knight.embarkOnQuest(); // Use it
-context.close();}}</p><p>Note: knights.xml file knows what the implementations are (BraveKnight and SlayDragonQuest as shown in 1.6).</p><p>1.1.3 Applying aspects.</p><p>Aspect-oriented programming (AOP) enables you to capture functionality that’s used throughout your application in reusable components.
+context.close();}}</p>
+<p>Note: knights.xml file knows what the implementations are (BraveKnight and SlayDragonQuest as shown in 1.6).</p>
+<p>1.1.3 Applying aspects.</p>
+<p>Aspect-oriented programming (AOP) enables you to capture functionality that’s used throughout your application in reusable components.
 In more detail:
 Components in system tend to carry responsibilities beyond their core functionality. Logging is prime example.
 By spreading these concerns across multiple components:
 • The code that implements the system-wide concerns is duplicated across multiple components.
 • Your components are littered with code that isn’t alligned with their core functionality.
-In short, aspects ensure that POJO’s remain plain. AOP modularizes services: this results components are more cohesive (focus on their own specific concerns), completely ignorant of any system services (logging, transaction management, security & so on). Illustrated (without AOP):</p><p>Illustrated with AOP:</p><p>Listing 1.9 Simplified – Minstrel class that serves as logger to previously shown Knight.class.</p><p>package com.springinaction.knights;
-import java.io.PrintStream;</p><p>public class Minstrel {
-private PrintStream stream;</p><p>public Minstrel(PrintStream stream) {
+In short, aspects ensure that POJO’s remain plain. AOP modularizes services: this results components are more cohesive (focus on their own specific concerns), completely ignorant of any system services (logging, transaction management, security &amp; so on). Illustrated (without AOP):</p>
+<p>Illustrated with AOP:</p>
+<p>Listing 1.9 Simplified – Minstrel class that serves as logger to previously shown Knight.class.</p>
+<p>package com.springinaction.knights;
+import java.io.PrintStream;</p>
+<p>public class Minstrel {
+private PrintStream stream;</p>
+<p>public Minstrel(PrintStream stream) {
 this.stream = stream;
-}</p><p>public void singBeforeQuest() {
+}</p>
+<p>public void singBeforeQuest() {
 stream.println(&ldquo;Quest started!&rdquo;);
 }
 public void singAfterQuest() {
-stream.println(&ldquo;Quest finished!&rdquo;);}}</p><p>Note: Listing 1.10 illustrates the wrong way of doing things. We omit that for brevity. And proceed to next listing which shows correct way of doing things.
-Listing 1.11 Declaring the Minstrel as an aspect using XML file. Updated knights.xml:</p><p>Declaring Minstrel (~ M.) as an aspect:</p><ol><li>Declare M. as bean .</li><li>Refer to that bean in <a href=aop:aspect>aop:aspect</a>.</li><li>Declare (using <a href=aop:before>aop:before</a>) before embarkOnQuest() singBeforeQuest() is called. ~ before advice.</li><li>Declare (using <a href=aop:before>aop:before</a>) after embarkOnQuest() singAfterQuest() is called. ~ after advice.</li><li>pointcut-ref attribute refers to a pointcut named embark.</li></ol><p>Important:</p><ol><li>Minstrel is still a POJO.</li><li>Minstrel can be applied to BraveKnight, however latter remains unaware of Minstrel existence.</li></ol><p>1.1.4 Eliminating boilerplate code with templates
-Listing 1.12 shows verbose example of JDBC connection, where “the small bit of code
+stream.println(&ldquo;Quest finished!&rdquo;);}}</p>
+<p>Note: Listing 1.10 illustrates the wrong way of doing things. We omit that for brevity. And proceed to next listing which shows correct way of doing things.
+Listing 1.11 Declaring the Minstrel as an aspect using XML file. Updated knights.xml:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>Declaring Minstrel (~ M.) as an aspect:</p>
+<ol>
+<li>Declare M. as bean .</li>
+<li>Refer to that bean in <a href="aop:aspect">aop:aspect</a>.</li>
+<li>Declare (using <a href="aop:before">aop:before</a>) before embarkOnQuest() singBeforeQuest() is called. ~ before advice.</li>
+<li>Declare (using <a href="aop:before">aop:before</a>) after embarkOnQuest() singAfterQuest() is called. ~ after advice.</li>
+<li>pointcut-ref attribute refers to a pointcut named embark.</li>
+</ol>
+<p>Important:</p>
+<ol>
+<li>Minstrel is still a POJO.</li>
+<li>Minstrel can be applied to BraveKnight, however latter remains unaware of  Minstrel existence.</li>
+</ol>
+<p>1.1.4 Eliminating boilerplate code with templates
+Listing 1.12 shows verbose example  of JDBC connection, where “the small bit of code
 that’s specific to querying for an employee is buried in a heap of JDBC ceremony”.
-Listing 1.13 Templates let your code focus on the task at hand.</p><p>public Employee getEmployeeById(long id) {
+Listing 1.13 Templates let your code focus on the task at hand.</p>
+<p>public Employee getEmployeeById(long id) {
 return jdbcTemplate.queryForObject(
-&ldquo;select id, firstname, lastname, salary " + // Query
+&ldquo;select id, firstname, lastname, salary &quot; + // Query
 &ldquo;from employee where id=?&rdquo;,
-new RowMapper() {
+new RowMapper<!-- raw HTML omitted -->() {
 public Employee mapRow(ResultSet rs,
 int rowNum) throws SQLException {
 Employee employee = new Employee();
@@ -127,18 +864,159 @@ return employee;
 }
 },
 id); // Query parameter.
-}</p><p>This version of getEmployeeById() is acutely focused on getting employee from DB.
-By now author has shown:</p><ol><li>POJO-oriented development</li><li>DI</li><li>Aspects</li><li>Templates</li><li>Bean configuration and aspects in XML based configuration.
-Ahead Spring container – where you app beans reside.</li></ol><p>1.2 Containing your beans
+}</p>
+<p>This version of getEmployeeById() is acutely focused on getting employee from DB.
+By now author has shown:</p>
+<ol>
+<li>POJO-oriented development</li>
+<li>DI</li>
+<li>Aspects</li>
+<li>Templates</li>
+<li>Bean configuration and aspects in XML based configuration.
+Ahead Spring container – where you app beans reside.</li>
+</ol>
+<p>1.2 Containing your beans
 In spring app objects live in container (~ c.).
-Container:</p><ol><li>Creates objects (~ o.)</li><li>Wires o.</li><li>Configures o.</li><li>Manages o. life cycle (from «new» to «finalize»).
-Spring’s container uses DI to manage the components that make up an application.</li></ol><p>Spring has two distinct container implementations:</p><ol><li>Bean factories (org.springframework.beans.factory.BeanFactory) ~ low level.</li><li>Application contexts (org.springframework.context.ApplicationContext)</li></ol><p>1.2.1 Working with an application context (~ctxt.)
+Container:</p>
+<ol>
+<li>Creates objects (~ o.)</li>
+<li>Wires o.</li>
+<li>Configures o.</li>
+<li>Manages o. life cycle (from «new» to «finalize»).
+Spring’s container uses DI to manage the components that make up an application.</li>
+</ol>
+<p>Spring has two distinct container implementations:</p>
+<ol>
+<li>Bean factories (org.springframework.beans.factory.BeanFactory) ~ low level.</li>
+<li>Application contexts (org.springframework.context.ApplicationContext)</li>
+</ol>
+<p>1.2.1 Working with an application context (~ctxt.)
 Application context flavors:
 • AnnotationConfigApplicationContext
 • AnnotationConfigWebApplicationContext
 • ClassPathXmlApplicationContext
 • FileSystemXmlApplicationContext
-• XmlWebApplicationContext</p><p>A) Loading ctxt. using FileSystemXmlApplicationContext:</p><p>ApplicationContext context = new
-FileSystemXmlApplicationContext(&ldquo;c:/knight.xml&rdquo;);</p><p>B) Similarly ClassPathXmlApplicationContext:</p><p>ApplicationContext context = new
-ClassPathXmlApplicationContext(&ldquo;knight.xml&rdquo;);</p><p>The difference between these two is that B) look for knight.xml anywhere (including JAR files).</p><p>C) Using AnnotationConfigApplicationContext:</p><p>ApplicationContext context = new AnnotationConfigApplicationContext(
-com.springinaction.knights.config.KnightConfig.class);</p><p>Note: above KnightConfig.class is configuration class.</p><p>1.2.2 A bean’s life</p><p>Figure 1.5 shows steps bean factory performs:</p><ol><li>Spring instantiates the bean.</li><li>Spring injects values and bean references into the bean’s properties.</li><li>If the bean implements BeanNameAware,Spring passes the bean’s ID to the setBeanName() method.</li></ol></article><h2><a href=https://gh0stinthesh311.github.io/docs/disclaimer/>Disclaimer</a></h2><footer class=book-footer><div class="flex flex-wrap justify-between"><div></div><div></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script><div class=book-comments><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//gh0stinthesh311-github-io.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
+• XmlWebApplicationContext</p>
+<p>A) Loading ctxt. using FileSystemXmlApplicationContext:</p>
+<p>ApplicationContext context = new
+FileSystemXmlApplicationContext(&ldquo;c:/knight.xml&rdquo;);</p>
+<p>B) Similarly ClassPathXmlApplicationContext:</p>
+<p>ApplicationContext context = new
+ClassPathXmlApplicationContext(&ldquo;knight.xml&rdquo;);</p>
+<p>The difference between these two is that B) look for knight.xml anywhere (including JAR files).</p>
+<p>C) Using AnnotationConfigApplicationContext:</p>
+<p>ApplicationContext context = new AnnotationConfigApplicationContext(
+com.springinaction.knights.config.KnightConfig.class);</p>
+<p>Note: above KnightConfig.class is configuration class.</p>
+<p>1.2.2 A bean’s life</p>
+<p>Figure 1.5 shows steps bean factory performs:</p>
+<ol>
+<li>Spring instantiates the bean.</li>
+<li>Spring injects values and bean references into the bean’s properties.</li>
+<li>If the bean implements BeanNameAware,Spring  passes the bean’s ID to the setBeanName() method.</li>
+</ol>
+</article>
+ 
+      <h2> <a href="https://gh0stinthesh311.github.io/docs/disclaimer/">Disclaimer</a></h2>
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+
+
+
+
+  
+  
+  
+
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+  
+  <div class="book-comments">
+<div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "gh0stinthesh311-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  
+ 
+        
+        
+
+ 
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+
+<aside class="book-toc">
+  <div class="book-toc-content">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </div>
+</aside>
+
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
